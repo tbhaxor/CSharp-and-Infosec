@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP Reverse Shell", "TCP Reverse Shell\TCP Reverse Shell.csproj", "{1D8B5C8C-6918-4A3D-8C33-7C0DDD5F562C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP Bind Shell", "TCP Bind Shell\TCP Bind Shell.csproj", "{573F42B5-48A3-4002-9C17-E5934E21BC30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1D8B5C8C-6918-4A3D-8C33-7C0DDD5F562C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D8B5C8C-6918-4A3D-8C33-7C0DDD5F562C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D8B5C8C-6918-4A3D-8C33-7C0DDD5F562C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573F42B5-48A3-4002-9C17-E5934E21BC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573F42B5-48A3-4002-9C17-E5934E21BC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573F42B5-48A3-4002-9C17-E5934E21BC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573F42B5-48A3-4002-9C17-E5934E21BC30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
