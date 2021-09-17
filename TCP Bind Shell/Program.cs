@@ -75,8 +75,6 @@ namespace TCP_Bind_Shell {
                     stream.Close();
                 }
             }
-            // closing the server
-            server.Stop();
         }
     }
 }
