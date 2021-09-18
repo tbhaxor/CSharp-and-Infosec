@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP Reverse Shell", "TCP Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP Bind Shell", "TCP Bind Shell\TCP Bind Shell.csproj", "{573F42B5-48A3-4002-9C17-E5934E21BC30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PInvoke MSF Payload", "PInvoke MSF Payload\PInvoke MSF Payload.csproj", "{97DC7BD8-F662-438F-A71D-263C58C5B21C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{573F42B5-48A3-4002-9C17-E5934E21BC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{573F42B5-48A3-4002-9C17-E5934E21BC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{573F42B5-48A3-4002-9C17-E5934E21BC30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97DC7BD8-F662-438F-A71D-263C58C5B21C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97DC7BD8-F662-438F-A71D-263C58C5B21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97DC7BD8-F662-438F-A71D-263C58C5B21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97DC7BD8-F662-438F-A71D-263C58C5B21C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
