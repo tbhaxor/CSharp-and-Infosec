@@ -3,11 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP Reverse Shell", "TCP Reverse Shell\TCP Reverse Shell.csproj", "{1D8B5C8C-6918-4A3D-8C33-7C0DDD5F562C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCP Reverse Shell", "TCP Reverse Shell\TCP Reverse Shell.csproj", "{1D8B5C8C-6918-4A3D-8C33-7C0DDD5F562C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP Bind Shell", "TCP Bind Shell\TCP Bind Shell.csproj", "{573F42B5-48A3-4002-9C17-E5934E21BC30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCP Bind Shell", "TCP Bind Shell\TCP Bind Shell.csproj", "{573F42B5-48A3-4002-9C17-E5934E21BC30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PInvoke MSF Payload", "PInvoke MSF Payload\PInvoke MSF Payload.csproj", "{97DC7BD8-F662-438F-A71D-263C58C5B21C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvoke MSF Payload", "PInvoke MSF Payload\PInvoke MSF Payload.csproj", "{97DC7BD8-F662-438F-A71D-263C58C5B21C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encryped C2C", "Encryped C2C\Encryped C2C.csproj", "{EDE1FCB6-29BA-4E0B-BEA4-44034C37FCB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C6D5E090-876A-4C2F-8B20-A7E6D789DD44}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +34,10 @@ Global
 		{97DC7BD8-F662-438F-A71D-263C58C5B21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97DC7BD8-F662-438F-A71D-263C58C5B21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97DC7BD8-F662-438F-A71D-263C58C5B21C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE1FCB6-29BA-4E0B-BEA4-44034C37FCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE1FCB6-29BA-4E0B-BEA4-44034C37FCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE1FCB6-29BA-4E0B-BEA4-44034C37FCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE1FCB6-29BA-4E0B-BEA4-44034C37FCB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
