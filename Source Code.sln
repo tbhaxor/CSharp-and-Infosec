@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCP Bind Shell", "TCP Bind 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvoke MSF Payload", "PInvoke MSF Payload\PInvoke MSF Payload.csproj", "{97DC7BD8-F662-438F-A71D-263C58C5B21C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encryped C2C", "Encryped C2C\Encryped C2C.csproj", "{EDE1FCB6-29BA-4E0B-BEA4-44034C37FCB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Encrypted C2C", "Encryped C2C\Encrypted C2C.csproj", "{EDE1FCB6-29BA-4E0B-BEA4-44034C37FCB2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C6D5E090-876A-4C2F-8B20-A7E6D789DD44}"
 	ProjectSection(SolutionItems) = preProject
