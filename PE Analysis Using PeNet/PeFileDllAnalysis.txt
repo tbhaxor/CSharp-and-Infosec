@@ -1,0 +1,45 @@
+// This file contains the pe file analysis of the Dll file generate after compiling in x64 architecture
+
+[!] PE File Header
+	[+] Machine Type: I386
+	[+] Number of Sections: 3
+	[+] Date and time of image creation: 26-08-2067 08:17:57
+	[+] Number of Symbols: 0
+	[+] File Characteristrics: ExecutableImage, LargeAddressAware
+[!] Optional Header
+	[+] Magic: Bit32
+	[+] Linker Version: 48.0
+	[+] Size of Code: 14336
+	[+] Size of Initialized Data: 2048
+	[+] Size of Uninitialized Data: 0
+	[+] Address of Entrypoint: 0x0000561A
+	[+] Base of Code (RVA): 0x00002000
+	[+] Base of Code (VA): 0x0000000000402000
+	[+] Base of Image Loading (VA): 0x0000000000400000
+	[+] Section Alignment: 8192
+	[+] File Alignment: 512
+	[+] Operating System Version Required: 4.0
+	[+] Image Version Required: 0.0
+	[+] Subsystem Version to Execute File: 4.0
+	[+] Size of Image File: 40960
+	[+] Size of all Headers: 512
+	[+] Subsystem Required to Execute: WindowsCui
+	[+] Dll Characteristics of Image: 34144
+	[+] Size of Stack Commit and Reserve: 4096	1048576
+	[+] Size of Heap Commit and Reserve: 4096	1048576
+	[+] Number of Directory Entries: 16
+[!] Imported Functions
+	[+] Function Name: _CorExeMain
+	    DLL: mscoree.dll
+	    IAT Offset: 0
+[!] Resource Directories
+	[+] Characteristics: 0x00000000
+	[+] Version: 0.0
+	[+] Total Entries: 2
+	[!] Data Entries
+		[+] ID: 16		Name: Version
+		    Entry Type: ID Entry
+		    Data is Directory: True
+		[+] ID: 24		Name: Manifest
+		    Entry Type: ID Entry
+		    Data is Directory: True

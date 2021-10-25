@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>PE_Analysis_Using_PeNet</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="PeNet">
+      <HintPath>..\..\PeNet\src\PeNet\bin\Debug\net5.0\PeNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
